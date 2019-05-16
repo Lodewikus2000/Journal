@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class InputActivity extends AppCompatActivity {
@@ -14,6 +16,16 @@ public class InputActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
+
+
+
+        Spinner spinner = (Spinner) findViewById(R.id.spinnerMood);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.moods_array, R.layout.spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinner.setAdapter(adapter);
     }
 
 
@@ -32,8 +44,8 @@ public class InputActivity extends AppCompatActivity {
         String title = titleView.getText().toString();
         entry.setTitle(title);
 
-        TextView moodView = findViewById(R.id.editTextMood);
-        String mood = moodView.getText().toString();
+        Spinner moodView = findViewById(R.id.spinnerMood);
+        String mood = moodView.getSelectedItem().toString();
         entry.setMood(mood);
 
         // Get the database and insert the entry.
