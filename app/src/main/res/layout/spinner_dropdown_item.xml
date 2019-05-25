@@ -2,11 +2,10 @@
 <CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@android:id/text1"
     style="?android:attr/spinnerDropDownItemStyle"
-    android:singleLine="true"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:dropDownWidth="wrap_content"
     android:ellipsize="marquee"
-    android:textSize="64sp"
     android:minWidth="64dp"
-    android:textColor="#000000"/>
+    android:singleLine="true"
+    android:textColor="#000000"
+    android:textSize="64sp" />

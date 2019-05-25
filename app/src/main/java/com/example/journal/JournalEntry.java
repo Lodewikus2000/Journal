@@ -10,12 +10,11 @@ public class JournalEntry implements Serializable {
     private String mood;
     private String timestamp;
 
+
     public JournalEntry() {
 
     }
 
-
-    // alternative constructor
     public JournalEntry(int id, String title, String content, String mood, String timestamp) {
         this.id = id;
         this.title = title;

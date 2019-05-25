@@ -2,6 +2,6 @@
     android:id="@android:id/text1"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:textSize="64sp"
     android:minWidth="64dp"
-    android:textColor="#000000" />
+    android:textColor="#000000"
+    android:textSize="64sp" />

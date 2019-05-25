@@ -11,6 +11,8 @@ public class DetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        setTitle("Journal entry");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 

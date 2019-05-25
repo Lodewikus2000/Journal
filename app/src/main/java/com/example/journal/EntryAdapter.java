@@ -12,11 +12,14 @@ public class EntryAdapter extends ResourceCursorAdapter {
     private Cursor cursor;
 
     // constructor
-    public EntryAdapter(Context context, Cursor cursor) {
-        super(context, R.layout.entry_row, cursor);
-        this.layout = R.layout.entry_row;
+
+
+    public EntryAdapter(Context context, int layout, Cursor cursor, int flags) {
+        super(context, layout, cursor, flags);
         this.cursor = cursor;
+        this.layout = layout;
     }
+
 
 
     @Override
